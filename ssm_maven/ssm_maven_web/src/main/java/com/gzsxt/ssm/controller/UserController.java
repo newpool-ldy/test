@@ -22,6 +22,8 @@ public class UserController {
     public String userList(Model m){
         List<User> users = userService.selectList();
 
+        System.out.println("users : "+users);
+
         m.addAttribute("users",users);
         return "userlist";
     }
